@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+#bg {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2622380/ss_b3ed8ab522f5965e46bc7c090cad9d018f937ae2.1920x1080.jpg?t=1734999568');
+    position: fixed;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 98vh;
+}
+
+main {
+    background-color: #9170c6;
+    width: 80vw;
+    
+}
+
+header {
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    width: 100vw;
+    height: 20vh;
+    align-items: center;
+    
+}
+
+.img {
+    /*display: flex;
+    justify-content: flex-start;
+    transform: translate(-50px);
+    z-index: 0; */
+    width: 50%;
+}
+
+.tables {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.max-recommended {
+    border: 2px solid black;
+}
+
+.min-recommended {
+    border: 2px solid black;
+}
+
+td {
+    border: 1px solid black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around; 
+    width: 30%;
+    margin: 0 10% 0 0; 
+}
+
+.border {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+}
+
+.border:hover {
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+a:hover {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100vw;
+    /*padding: 0 0 1% 0;
+    height: 20vh;*/
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
+
+.txtStyle {
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    color: white;
+    margin: 0 0 0 1.5%;
+}
+.boldType {
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    margin: 0 0 0 1%;
+
+
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;
+    align-items: flex-start;*/
+    /*width: 90%;*/
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid black;
+    justify-content: space-evenly;
+    width: 700px;
+    height: 400px;
+    background-image: url("https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2622380/ss_b3ed8ab522f5965e46bc7c090cad9d018f937ae2.1920x1080.jpg?t=1734999568");
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+button {
+    text-align: center;
+}
+
+form input::placeholder {
+    text-align: center;
+}
+
+#popUp {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+    color: white;
+
+}
+
+#formButton {
+    cursor: pointer; 
+}
+
+.video {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.aboutGame {
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+}
+
+.slide-img {
+    width: 200px;
+    height: 100px;
+}
+
+#slider {
+    position: relative;
+    width: 50%;
+    margin: 0 auto; /* Центрируем слайдер */
+    overflow: hidden;
+    color: white; /* Устанавливаем белый цвет текста */
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для слайдов */
+.slide-img {
+    width: 100%;
+    height: 300px; /* Задайте нужную высоту */
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide-img:nth-child(1) {
+    position: relative; /* Первый слайд базово отображается */
+}
+
+/* Кнопки переключения */
+.slide-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+}
+
+/* Левые и правые кнопки */
+.slide-button.previous {
+    left: 10px;
+}
+
+.slide-button.next {
+    right: 10px;
+}
+
+/* Селекторы слайдов */
+.select-slide {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.select-slide-button {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.select-slide-button.active {
+    background: white;
+}
+
+/* Для активного слайда */
+.slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.slide-img:nth-child(1) {
+    opacity: 1;
+}
+
+#screens {
+    display: flex;
+
+}
