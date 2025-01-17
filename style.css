@@ -138,6 +138,7 @@ form {
     width: 700px;
     height: 400px;
     background-image: url("https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2622380/ss_b3ed8ab522f5965e46bc7c090cad9d018f937ae2.1920x1080.jpg?t=1734999568");
+    align-items: center;
 
 }
 
@@ -145,6 +146,18 @@ form {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+
+}
+
+#formButton {
+    display: inline;
+    width: 150px;
+    border: 2px black double;
+}
+
+#formButton:hover {
+    color: #9170c6;
+    cursor: pointer;
 }
 
 button {
